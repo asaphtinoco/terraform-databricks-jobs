@@ -64,9 +64,9 @@ module "linked_accounts_job" {
 - databricks_job_id: `"1234"`
 - databricks_job_name: `"example_databricks_job"`
 notebook_paths: [
-"/Workspace/example_datapoints.sql",
-"/Workspace/example_compliance.sql",
-"/Workspace/example_sar_dpa.sql"
+"/Workspace/query_1.sql",
+"/Workspace/query_2.sql",
+"/Workspace/query_3.sql"
 ]
 ```
 
@@ -75,9 +75,9 @@ notebook_paths: [
 
 The following files are referenced in the example usage:
 
-- **example_datapoints.sql**: Contains SQL queries for extracting data points.
-- **example_compliance.sql**: Contains SQL queries for compliance checks.
-- **example_sar_dpa.sql**: Contains SQL queries for Subject Access Requests (SAR) and Data Processing Agreements (DPA).
+- **query_1.sql**: Contains SQL queries for extracting data points.
+- **query_2.sql**: Contains SQL queries for compliance checks.
+- **query_3.sql**: Contains SQL queries for Subject Access Requests (SAR) and Data Processing Agreements (DPA).
 
 Ensure these files are present in your module directory or update the paths accordingly.
 
