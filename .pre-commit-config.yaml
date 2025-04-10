@@ -1,0 +1,23 @@
+repos:
+  # Terraform Docs - Automatically generate documentation for Terraform modules
+  - repo: https://github.com/terraform-docs/terraform-docs
+    rev: "v0.20.0"  # Use the latest stable version
+    hooks:
+      - id: terraform-docs-go
+        args: ["markdown", "table", "--output-file", "README.md", "./"]
+
+  # Pre-commit hooks for Terraform by Anton Babenko
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: "v1.98.1"  # Use the latest stable version
+    hooks:
+      - id: terraform_fmt           # Formats Terraform files to canonical format
+      - id: terraform_validate      # Validates Terraform configuration files
+      - id: terraform_tflint        # Lints Terraform code using TFLint
+      - id: terraform_tfsec         # Performs security checks on Terraform code
+      - id: terraform_docs          # Updates documentation for Terraform modules
+
+  # Additional static analysis tools (optional)
+  - repo: https://github.com/bridgecrewio/checkov
+    rev: "3.2.402"  # Example version
+    hooks:
+      - id: checkov                 # Static analysis for security and compliance
